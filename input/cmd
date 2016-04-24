@@ -1,0 +1,6 @@
+#!/bin/bash
+cores=$1
+lines=$(cat cleaned | wc -l)
+# rounding up truncating arithmetic
+split=$((($lines + $cores - 1) / $cores))
+split -l $split cleaned

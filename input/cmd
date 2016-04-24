@@ -1,6 +1,7 @@
 #!/bin/bash
+CLEANED=/home/abrahamphilip/projects/py-dealer/nltk/cleaned
 cores=$1
-lines=$(cat cleaned | wc -l)
+lines=$(cat $CLEANED | wc -l)
 # rounding up truncating arithmetic
 split=$((($lines + $cores - 1) / $cores))
-split -l $split cleaned
+split -l $split $CLEANED

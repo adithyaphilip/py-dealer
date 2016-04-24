@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir temp 2> /dev/null
+python3 /home/abrahamphilip/learning/nltk/abbrev.py > op 2>temp/progress
